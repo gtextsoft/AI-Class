@@ -409,46 +409,225 @@
     .cta-section {
       padding-top: 1rem;
       padding-bottom: 5.2rem;
+      scroll-margin-top: 5.5rem;
     }
 
-    .cta-box {
-      background:
-        linear-gradient(140deg, rgba(110, 168, 254, 0.18), rgba(69, 214, 168, 0.11)),
-        rgba(17, 24, 49, 0.94);
-      border: 1px solid rgba(110, 168, 254, 0.45);
-      border-radius: calc(var(--radius) + 2px);
+    .payment-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.05fr;
+      gap: 1.5rem;
+      align-items: stretch;
+    }
+
+    .payment-intro {
+      background: linear-gradient(180deg, rgba(18, 27, 53, 0.92), rgba(12, 17, 34, 0.96));
+      border: 1px solid var(--panel-border);
+      border-radius: calc(var(--radius) + 4px);
       box-shadow: var(--shadow);
-      padding: 2rem 1.45rem;
-      text-align: center;
+      padding: 1.75rem 1.5rem;
     }
 
-    .cta-box h2 {
+    .payment-intro h2 {
       font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(1.5rem, 3vw, 2.1rem);
+      font-size: clamp(1.45rem, 2.8vw, 2rem);
       line-height: 1.2;
       margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
     }
 
-    .cta-box p {
-      color: #d2ddfb;
-      max-width: 700px;
-      margin: 0 auto 1.35rem;
+    .payment-intro > p {
+      color: var(--text-muted);
       font-size: 0.98rem;
+      margin-bottom: 1.25rem;
+      line-height: 1.55;
     }
 
-    .cta-actions {
+    .payment-perks {
+      list-style: none;
+      display: grid;
+      gap: 0.65rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .payment-perks li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.92rem;
+      color: #d5e2ff;
+      line-height: 1.45;
+    }
+
+    .payment-perks li::before {
+      content: "";
+      flex-shrink: 0;
+      width: 1.35rem;
+      height: 1.35rem;
+      margin-top: 0.08rem;
+      border-radius: 6px;
+      background: rgba(69, 214, 168, 0.2);
+      border: 1px solid rgba(69, 214, 168, 0.45);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2345d6a8' stroke-width='2.5'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 0.72rem;
+    }
+
+    .payment-trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .payment-trust-pill {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #b8c8f4;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(31, 43, 79, 0.55);
+      border: 1px solid rgba(110, 168, 254, 0.25);
+    }
+
+    .payment-panel {
+      background:
+        linear-gradient(145deg, rgba(110, 168, 254, 0.12), rgba(69, 214, 168, 0.06)),
+        rgba(17, 24, 49, 0.96);
+      border: 1px solid rgba(110, 168, 254, 0.4);
+      border-radius: calc(var(--radius) + 4px);
+      box-shadow: var(--shadow);
+      padding: 1.75rem 1.5rem;
+    }
+
+    .payment-panel-header {
+      text-align: center;
+      margin-bottom: 1.35rem;
+    }
+
+    .payment-panel-header h3 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.05rem;
+      color: #e8f0ff;
+      margin-bottom: 0.35rem;
+    }
+
+    .payment-panel-header p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    .payment-methods {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+      margin-bottom: 1rem;
+    }
+
+    .payment-method {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 1rem 1rem 0.95rem;
+      border-radius: var(--radius-sm);
+      background: rgba(11, 16, 32, 0.65);
+      border: 1px solid rgba(38, 52, 95, 0.9);
+      transition: border-color 0.2s ease, transform 0.16s ease, box-shadow 0.2s ease;
+      text-align: left;
+    }
+
+    .payment-method:hover {
+      border-color: rgba(110, 168, 254, 0.55);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(6, 10, 24, 0.35);
+    }
+
+    .payment-method-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #8aa4e8;
+      margin-bottom: 0.35rem;
+    }
+
+    .payment-method-title {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+
+    .payment-method-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+      line-height: 1.4;
+    }
+
+    .payment-method .btn {
+      width: 100%;
+      margin-top: auto;
+      font-size: 0.88rem;
+      padding: 0.75rem 1rem;
+    }
+
+    .payment-method--primary .btn {
+      background: linear-gradient(145deg, var(--primary), var(--primary-strong));
+      color: #fff;
+      border: none;
+      box-shadow: 0 8px 22px rgba(61, 123, 253, 0.28);
+    }
+
+    .payment-method--secondary .btn {
+      border-color: rgba(110, 168, 254, 0.5);
+      background: rgba(18, 27, 53, 0.85);
+      color: #dce7ff;
+    }
+
+    .payment-divider {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 0.25rem 0 1rem;
+      color: #7a8ab8;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .payment-divider::before,
+    .payment-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: rgba(110, 168, 254, 0.2);
+    }
+
+    .payment-whatsapp {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 0.75rem;
+      gap: 0.65rem;
       flex-wrap: wrap;
     }
 
+    .payment-whatsapp .btn {
+      min-width: 200px;
+    }
+
     .payment-note {
-      margin-top: 1rem;
+      margin-top: 1.15rem;
       color: #b8c8f4;
-      font-size: 0.87rem;
-      line-height: 1.5;
+      font-size: 0.84rem;
+      line-height: 1.55;
+      text-align: center;
+    }
+
+    .payment-note strong {
+      color: #dce5ff;
+      font-weight: 600;
     }
 
     .footer {
@@ -516,8 +695,13 @@
       .position-card,
       .challenge-card,
       .audience-card,
-      .cta-box {
+      .payment-intro,
+      .payment-panel {
         padding: 1rem;
+      }
+
+      .payment-methods {
+        grid-template-columns: 1fr;
       }
 
       .footer {
@@ -528,7 +712,8 @@
     @media (max-width: 1020px) {
       .hero-grid,
       .premium-wrap,
-      .curriculum-grid {
+      .curriculum-grid,
+      .payment-layout {
         grid-template-columns: 1fr;
       }
 
@@ -560,14 +745,13 @@
         padding-top: 3.9rem;
       }
 
-      .hero-cta,
-      .cta-actions {
+      .hero-cta {
         flex-direction: column;
         align-items: stretch;
       }
 
       .hero-cta .btn,
-      .cta-actions .btn {
+      .payment-whatsapp .btn {
         width: 100%;
       }
 
@@ -617,8 +801,9 @@
         <a href="#curriculum">Curriculum</a>
         <a href="#premium">Premium Benefits</a>
         <a href="#who">Who It Is For</a>
+        <a href="#payment">Enroll</a>
       </nav>
-      <a href="/aiclassform" class="btn btn-primary">Apply Now</a>
+      <a href="#payment" class="btn btn-primary">Apply Now</a>
     </div>
   </header>
 
@@ -640,7 +825,7 @@
             <li>Final project with certification.</li>
           </ul>
           <div class="hero-cta">
-            <a href="/aiclassform" class="btn btn-primary">Reserve Your Spot</a>
+            <a href="#payment" class="btn btn-primary">Reserve Your Spot</a>
             <a href="#curriculum" class="btn btn-secondary">Explore Curriculum</a>
           </div>
           <p class="hero-trust">Trusted framework for professionals serious about practical AI implementation.</p>
@@ -816,21 +1001,68 @@
       </div>
     </section>
 
-    <section class="section cta-section" id="enroll">
-      <div class="container">
-        <div class="cta-box">
-          <h2>Become AI-capable in 4 weeks and leave with real assets, systems, and proof.</h2>
+    <section class="section cta-section" id="payment" aria-labelledby="payment-heading">
+      <div class="container payment-layout">
+        <div class="payment-intro">
+          <span class="badge">Enrollment &amp; checkout</span>
+          <h2 id="payment-heading">Secure your seat for the 4-week certification</h2>
           <p>
-            Join the AI Income Masterclass to gain practical workflows for productivity, content,
-            lead generation, sales automation, and monetization. This is implementation-first,
-            business-focused AI training for serious growth.
+            Choose your currency below. You will complete payment on a secure checkout page (Paystack for NGN,
+            Stripe for USD), then you will receive onboarding details for the masterclass.
           </p>
-          <div class="cta-actions">
-            <a href="https://paystack.shop/pay/zck8vyfyo0" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Pay in Naira (NGN)</a>
-            <a href="https://buy.stripe.com/cNidRafgq4ds0Rx5Z14c801" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Pay in Dollars (USD)</a>
-            <a href="https://wa.me/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+          <ul class="payment-perks">
+            <li>Full access to all four weekly modules, assignments, and templates.</li>
+            <li>Certification and capstone feedback upon successful completion.</li>
+            <li>Community access for accountability and peer support.</li>
+          </ul>
+          <div class="payment-trust-row">
+            <span class="payment-trust-pill">Encrypted checkout</span>
+            <span class="payment-trust-pill">Paystack &middot; Stripe</span>
+            <span class="payment-trust-pill">4-week structured program</span>
           </div>
-          <p class="payment-note">Secure checkout options available via Paystack (NGN) and Stripe (USD).</p>
+        </div>
+
+        <div class="payment-panel">
+          <div class="payment-panel-header">
+            <h3>Complete payment</h3>
+            <p>Select Naira or US Dollars. Opens in a new tab.</p>
+          </div>
+
+          <div class="payment-methods">
+            <article class="payment-method payment-method--primary">
+              <span class="payment-method-label">Nigeria</span>
+              <div class="payment-method-title">Pay in Naira</div>
+              <p class="payment-method-desc">Local cards, bank transfer, and USSD via Paystack where available.</p>
+              <a
+                href="https://paystack.shop/pay/zck8vyfyo0"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Pay with Paystack (NGN)</a>
+            </article>
+            <article class="payment-method payment-method--secondary">
+              <span class="payment-method-label">International</span>
+              <div class="payment-method-title">Pay in US Dollars</div>
+              <p class="payment-method-desc">Cards and wallets accepted through Stripe&apos;s secure checkout.</p>
+              <a
+                href="https://buy.stripe.com/cNidRafgq4ds0Rx5Z14c801"
+                class="btn btn-secondary"
+                target="_blank"
+                rel="noopener noreferrer"
+              >Pay with Stripe (USD)</a>
+            </article>
+          </div>
+
+          <div class="payment-divider" role="presentation">Or</div>
+
+          <div class="payment-whatsapp">
+            <a href="https://wa.me/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Questions? Chat on WhatsApp</a>
+          </div>
+
+          <p class="payment-note">
+            <strong>After payment:</strong> save your receipt. If you don&apos;t hear from us within one business day,
+            message us on WhatsApp with your payment confirmation.
+          </p>
         </div>
       </div>
     </section>
