@@ -10,10 +10,10 @@
   <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Income Masterclass | 4-Week Certification</title>
+  <title>4 Weeks AI Course (Certification) 2.0 | Stephen Akintayo Foundation</title>
   <meta
     name="description"
-    content="A 4-week professional certification in applied AI. Built for owners, operators, and creators who want working systems — not another prompt list."
+    content="A 4-week AI certification with Dr. Stephen Akintayo. Live every Thursday, 17 September–8 October 2026, 5:00 PM WAT / 11:00 CST. Master AI, automate your business, and turn it into income."
   >
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -579,6 +579,129 @@
       color: var(--mute);
     }
 
+    .voices {
+      padding: 0 0 5rem;
+      scroll-margin-top: 5rem;
+    }
+
+    .voice-slider {
+      background: var(--folio);
+      border: 1px solid var(--rule);
+      padding: 2rem 1.75rem 1.5rem;
+    }
+
+    .voice-viewport {
+      overflow: hidden;
+      touch-action: pan-y;
+    }
+
+    .voice-track {
+      display: flex;
+      transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .voice {
+      flex: 0 0 100%;
+      min-width: 100%;
+      margin: 0;
+      padding-right: 0.25rem;
+    }
+
+    .voice p {
+      font-family: var(--display);
+      font-size: clamp(1.28rem, 2.4vw, 1.7rem);
+      font-weight: 500;
+      font-style: italic;
+      letter-spacing: -0.02em;
+      line-height: 1.35;
+      margin-bottom: 1.25rem;
+    }
+
+    .voice p::before {
+      content: "“";
+      color: var(--oxblood);
+      font-style: normal;
+      font-weight: 600;
+      margin-right: 0.15rem;
+    }
+
+    .voice footer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .voice cite {
+      font-family: var(--display);
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.05rem;
+      letter-spacing: -0.02em;
+    }
+
+    .voice .role {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--mute);
+    }
+
+    .voice-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      padding-top: 1.15rem;
+      border-top: 1px solid var(--rule);
+    }
+
+    .voice-arrows {
+      display: flex;
+      gap: 0.45rem;
+    }
+
+    .voice-btn {
+      width: 2.4rem;
+      height: 2.4rem;
+      padding: 0;
+      border: 1px solid var(--rule);
+      background: var(--limestone);
+      color: var(--ink);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+    }
+
+    .voice-btn:hover {
+      border-color: var(--ink);
+    }
+
+    .voice-btn svg {
+      width: 1rem;
+      height: 1rem;
+    }
+
+    .voice-dots {
+      display: flex;
+      gap: 0.45rem;
+    }
+
+    .voice-dots button {
+      width: 0.55rem;
+      height: 0.55rem;
+      padding: 0;
+      border: 0;
+      border-radius: 50%;
+      background: var(--rule);
+      cursor: pointer;
+    }
+
+    .voice-dots button[aria-current="true"] {
+      background: var(--oxblood);
+    }
+
     .tuition {
       padding: 0 0 5.2rem;
       scroll-margin-top: 5rem;
@@ -786,6 +909,14 @@
         padding: 3.5rem 0;
       }
 
+      .voices {
+        padding-bottom: 3.5rem;
+      }
+
+      .voice-slider {
+        padding: 1.35rem 1.1rem 1.15rem;
+      }
+
       .syllabus::before {
         left: 1.05rem;
       }
@@ -798,6 +929,10 @@
 
       .seal-wrap {
         animation: none;
+      }
+
+      .voice-track {
+        transition: none;
       }
     }
   </style>
@@ -812,14 +947,15 @@
 
   <header class="site-header">
     <div class="wrap nav">
-      <a href="#" class="wordmark" aria-label="AI Income Masterclass home">
-        <span class="wordmark-mark">AI<em>M</em></span>
-        <span class="wordmark-sub">Income Masterclass</span>
+      <a href="#" class="wordmark" aria-label="Stephen Akintayo Foundation home">
+        <span class="wordmark-mark">SA<em>F</em></span>
+        <span class="wordmark-sub">AI Course 2.0</span>
       </a>
       <nav class="nav-links" aria-label="Main">
         <a href="#syllabus">Syllabus</a>
         <a href="#included">Included</a>
         <a href="#who">Who it is for</a>
+        <a href="#voices">Testimonials</a>
         <a href="#tuition">Tuition</a>
       </nav>
       <a href="#tuition" class="btn btn-solid">Enroll now</a>
@@ -830,27 +966,28 @@
     <section class="hero">
       <div class="wrap hero-grid">
         <div>
-          <p class="kicker">Four-week professional certification</p>
-          <h1 class="display">Put AI to work for income — <em>not for novelty.</em></h1>
+          <p class="kicker">Stephen Akintayo Foundation · Certification 2.0</p>
+          <h1 class="display">4 Weeks AI Course — <em>certified.</em></h1>
           <p class="lede">
-            A structured masterclass for business owners, creators, and operators.
-            You leave with working workflows, a capstone you can show, and a certificate that names the skill.
+            Led by Dr. Stephen Akintayo, Founder of SACI Holdings USA.
+            Live every Thursday from 17 September to 8 October 2026, at 5:00 PM WAT / 11:00 CST.
+            You leave able to use AI for productivity, content, sales systems, automation, and income.
           </p>
           <div class="hero-actions">
             <a href="#tuition" class="btn btn-solid">Enroll now</a>
             <a href="#syllabus" class="btn btn-line">Read the syllabus</a>
           </div>
           <p class="registrar">
-            <span>4 weeks</span>
-            <span>Weekly assignments</span>
-            <span>Capstone</span>
+            <span>17 Sept – 8 Oct 2026</span>
+            <span>Every Thursday</span>
+            <span>5:00 PM WAT / 11:00 CST</span>
             <span>Certificate</span>
           </p>
         </div>
 
         <div class="seal-wrap" aria-hidden="true">
           <svg class="seal" viewBox="0 0 320 320" role="img">
-            <title>Applied AI four-week certification seal</title>
+            <title>4 Weeks AI Course Certification 2.0 seal</title>
             <circle class="seal-fill" cx="160" cy="160" r="148"/>
             <circle class="seal-ring" cx="160" cy="160" r="148" stroke-width="2.5"/>
             <circle class="seal-ring" cx="160" cy="160" r="132" stroke-width="1"/>
@@ -859,9 +996,9 @@
               <path id="seal-arc" d="M160,160 m-114,0 a114,114 0 1,1 228,0 a114,114 0 1,1 -228,0"/>
             </defs>
             <text class="seal-type">
-              <textPath href="#seal-arc" startOffset="0%">Applied AI · Four weeks · Certified practice · Cohort ·</textPath>
+              <textPath href="#seal-arc" startOffset="0%">Four weeks · AI Course · Certification 2.0 · SAF ·</textPath>
             </text>
-            <text class="seal-core" x="160" y="168" text-anchor="middle">AIM</text>
+            <text class="seal-core" x="160" y="168" text-anchor="middle">2.0</text>
             <text class="seal-core-sub" x="160" y="192" text-anchor="middle">Certification</text>
           </svg>
         </div>
@@ -870,23 +1007,35 @@
 
     <section class="band" aria-labelledby="why-heading">
       <div class="wrap">
-        <p class="kicker">The shift</p>
-        <h2 id="why-heading" class="display">Most people collect prompts. You will ship systems.</h2>
+        <p class="kicker">What you will gain</p>
+        <h2 id="why-heading" class="display">Six outcomes from a four-week term.</h2>
         <p class="lede">
-          Each week moves you from guessing to a repeatable practice you can use in the business the next morning.
+          Each Thursday session is built to move a skill from the classroom into the business the same week.
         </p>
         <div class="shift">
           <article>
-            <h3><span>Clarity</span>Know what to use, and what to ignore</h3>
-            <p>Learn what AI actually does in a business — then apply it to decisions, writing, and planning without the technical fog.</p>
+            <h3>Master AI and boost productivity</h3>
+            <p>Use AI with confidence on the work you already do — writing, research, planning, and decisions.</p>
           </article>
           <article>
-            <h3><span>Leverage</span>Trade hours of busywork for workflows</h3>
-            <p>Replace the work you repeat every week with AI-assisted processes that hold up under real volume.</p>
+            <h3>Create high-converting content</h3>
+            <p>Produce hooks, captions, scripts, and assets that can attract attention and convert it.</p>
           </article>
           <article>
-            <h3><span>Revenue</span>Turn the skill into leads and offers</h3>
-            <p>Use the same practice for content, follow-up, and packaged services people will pay for.</p>
+            <h3>Build AI-powered sales systems</h3>
+            <p>Write offer messaging, follow-up, and lead workflows that run as a system — not a scramble.</p>
+          </article>
+          <article>
+            <h3>Automate your business</h3>
+            <p>Replace repetitive tasks with AI-assisted processes that hold up under real weekly volume.</p>
+          </article>
+          <article>
+            <h3>Turn AI into income</h3>
+            <p>Package what you can now do as an offer, a service, or a new line in the business.</p>
+          </article>
+          <article>
+            <h3>Build your AI advantage</h3>
+            <p>Leave with a certified practice you can keep using — and keep compounding — after 8 October.</p>
           </article>
         </div>
       </div>
@@ -897,14 +1046,14 @@
         <div class="folio-head">
           <p class="kicker">The term</p>
           <h2 id="syllabus-heading" class="display">A four-week syllabus, written to be used.</h2>
-          <p>Strategy in the room. Execution in the assignment. You implement the same week you learn it.</p>
+          <p>Four live Thursday sessions. Strategy in the room, execution in the assignment — you implement the same week you learn it.</p>
         </div>
 
         <div class="syllabus">
           <article class="week">
             <div class="week-mark" aria-hidden="true">I</div>
             <div class="week-body">
-              <h3><span class="visually-hidden">Week 1. </span>Foundations and productivity</h3>
+              <h3><span class="visually-hidden">Week 1. </span>Master AI and boost productivity</h3>
               <p class="week-theme">Understand AI, then put it to work the same day.</p>
               <ul>
                 <li>What AI is in business terms — without the technical fog.</li>
@@ -919,7 +1068,7 @@
           <article class="week">
             <div class="week-mark" aria-hidden="true">II</div>
             <div class="week-body">
-              <h3><span class="visually-hidden">Week 2. </span>Business and content</h3>
+              <h3><span class="visually-hidden">Week 2. </span>Create high-converting content</h3>
               <p class="week-theme">Turn the practice into a growth engine.</p>
               <ul>
                 <li>High-converting content from proven prompt systems.</li>
@@ -934,8 +1083,8 @@
           <article class="week">
             <div class="week-mark" aria-hidden="true">III</div>
             <div class="week-body">
-              <h3><span class="visually-hidden">Week 3. </span>Sales, marketing, and automation</h3>
-              <p class="week-theme">Generate leads, then close them with a system.</p>
+              <h3><span class="visually-hidden">Week 3. </span>Sales systems and automation</h3>
+              <p class="week-theme">Build AI-powered sales systems, then automate the follow-through.</p>
               <ul>
                 <li>Sales scripts and offer messaging written with AI.</li>
                 <li>WhatsApp automation and structured follow-up.</li>
@@ -950,8 +1099,8 @@
           <article class="week">
             <div class="week-mark" aria-hidden="true">IV</div>
             <div class="week-body">
-              <h3><span class="visually-hidden">Week 4. </span>Systems and monetization</h3>
-              <p class="week-theme">Leave with something that can earn.</p>
+              <h3><span class="visually-hidden">Week 4. </span>Turn AI into income</h3>
+              <p class="week-theme">Build your AI advantage, and leave with something that can earn.</p>
               <ul>
                 <li>Agentic AI and task automation, in practical terms.</li>
                 <li>Simple assistants with no-code and low-code stacks.</li>
@@ -1014,12 +1163,74 @@
       </div>
     </section>
 
+    <section class="voices" id="voices" aria-labelledby="voices-heading">
+      <div class="wrap">
+        <div class="folio-head">
+          <p class="kicker">From the last cohort</p>
+          <h2 id="voices-heading" class="display">What students took back to work.</h2>
+          <p>Certification 2.0 builds on the same practice. These notes are from people who already sat the term.</p>
+        </div>
+
+        <div class="voice-slider" data-voices role="region" aria-roledescription="carousel" aria-label="Student testimonials">
+          <div class="voice-viewport">
+            <div class="voice-track">
+              <blockquote class="voice">
+                <p>I stopped treating ChatGPT like a toy. By week two I had a content calendar my team could actually run, and I was no longer writing every caption myself.</p>
+                <footer>
+                  <cite>Adaeze Okonkwo</cite>
+                  <span class="role">Retail founder · Lagos</span>
+                </footer>
+              </blockquote>
+              <blockquote class="voice">
+                <p>The WhatsApp follow-up system was the piece I had been missing. Leads stopped going cold, and my close rate moved in the same month — not “someday after I figure out AI.”</p>
+                <footer>
+                  <cite>Michael Adeyemi</cite>
+                  <span class="role">Sales lead · Houston</span>
+                </footer>
+              </blockquote>
+              <blockquote class="voice">
+                <p>I came in as a designer who was drowning in client revisions. I left with a packaged AI service I could sell, and two retainers that paid for the course several times over.</p>
+                <footer>
+                  <cite>Chioma Eze</cite>
+                  <span class="role">Freelance designer · Abuja</span>
+                </footer>
+              </blockquote>
+              <blockquote class="voice">
+                <p>Dr. Akintayo keeps it practical. No fog, no tool-hopping. I now use the same weekly workflow for research, proposals, and delivery — and I got the hours back in my diary.</p>
+                <footer>
+                  <cite>Tunde Balogun</cite>
+                  <span class="role">Consultant · London</span>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="voice-controls">
+            <div class="voice-dots" data-dots></div>
+            <div class="voice-arrows">
+              <button class="voice-btn" type="button" data-prev aria-label="Previous testimonial">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M15 5l-7 7 7 7"/>
+                </svg>
+              </button>
+              <button class="voice-btn" type="button" data-next aria-label="Next testimonial">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M9 5l7 7-7 7"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="tuition" id="tuition" aria-labelledby="tuition-heading">
       <div class="wrap tuition-grid">
         <div class="tuition-copy">
           <p class="kicker">Tuition</p>
-          <h2 id="tuition-heading" class="display">Secure your seat for the four-week term.</h2>
+          <h2 id="tuition-heading" class="display">Secure your seat for 17 September.</h2>
           <p>
+            Four live sessions with Dr. Stephen Akintayo: every Thursday, 17 September to 8 October 2026, at 5:00 PM WAT / 11:00 CST.
             Choose a currency. You complete payment on a secure checkout page — Paystack for naira, Stripe for dollars — then receive onboarding details.
           </p>
           <ul>
@@ -1061,7 +1272,7 @@
 
           <div class="or-row">Or</div>
 
-          <a href="https://wa.me/" class="btn btn-line" target="_blank" rel="noopener noreferrer">Questions? Chat on WhatsApp</a>
+          <a href="https://wa.me/2348167901719" class="btn btn-line" target="_blank" rel="noopener noreferrer">Questions? Chat on WhatsApp</a>
 
           <p class="after-pay">
             <strong>After payment:</strong>
@@ -1074,9 +1285,97 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>AI Income Masterclass — professional certification</p>
-      <p>Four weeks · Practical systems · Real outcomes</p>
+      <p>Stephen Akintayo Foundation — 4 Weeks AI Course (Certification) 2.0</p>
+      <p>
+        <a href="mailto:products@stephenakintayo.com">products@stephenakintayo.com</a>
+        ·
+        <a href="tel:+2348167901719">+234 816 790 1719</a>
+        ·
+        <a href="tel:+12815050527">+1 (281) 505-0527</a>
+      </p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var root = document.querySelector("[data-voices]");
+      if (!root) return;
+
+      var track = root.querySelector(".voice-track");
+      var slides = Array.prototype.slice.call(root.querySelectorAll(".voice"));
+      var prev = root.querySelector("[data-prev]");
+      var next = root.querySelector("[data-next]");
+      var dotsWrap = root.querySelector("[data-dots]");
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var index = 0;
+      var timer = null;
+      var startX = null;
+
+      slides.forEach(function (_, n) {
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", "Go to testimonial " + (n + 1));
+        dot.addEventListener("click", function () {
+          go(n, true);
+        });
+        dotsWrap.appendChild(dot);
+      });
+
+      var dots = Array.prototype.slice.call(dotsWrap.children);
+
+      function go(n, stopAuto) {
+        index = (n + slides.length) % slides.length;
+        track.style.transform = "translateX(" + -index * 100 + "%)";
+        slides.forEach(function (slide, k) {
+          slide.setAttribute("aria-hidden", k === index ? "false" : "true");
+        });
+        dots.forEach(function (dot, k) {
+          if (k === index) dot.setAttribute("aria-current", "true");
+          else dot.removeAttribute("aria-current");
+        });
+        if (stopAuto) pause();
+      }
+
+      function play() {
+        if (reduce) return;
+        pause();
+        timer = window.setInterval(function () {
+          go(index + 1);
+        }, 6500);
+      }
+
+      function pause() {
+        window.clearInterval(timer);
+        timer = null;
+      }
+
+      prev.addEventListener("click", function () {
+        go(index - 1, true);
+      });
+      next.addEventListener("click", function () {
+        go(index + 1, true);
+      });
+
+      root.addEventListener("mouseenter", pause);
+      root.addEventListener("mouseleave", play);
+      root.addEventListener("focusin", pause);
+      root.addEventListener("focusout", function (event) {
+        if (!root.contains(event.relatedTarget)) play();
+      });
+
+      track.addEventListener("pointerdown", function (event) {
+        startX = event.clientX;
+      });
+      track.addEventListener("pointerup", function (event) {
+        if (startX === null) return;
+        var delta = event.clientX - startX;
+        if (Math.abs(delta) > 40) go(index + (delta < 0 ? 1 : -1), true);
+        startX = null;
+      });
+
+      go(0);
+      play();
+    })();
+  </script>
 </body>
 </html>
