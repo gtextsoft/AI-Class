@@ -1142,6 +1142,130 @@
       font-size: clamp(1.8rem, 3.5vw, 2.7rem);
     }
 
+    .tuition-copy {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tuition-copy::after {
+      content: "ADMIT ONE";
+      position: absolute;
+      top: 2rem;
+      right: -2.9rem;
+      padding: 0.35rem 3.2rem;
+      border-top: 1px solid rgba(212, 163, 171, 0.45);
+      border-bottom: 1px solid rgba(212, 163, 171, 0.45);
+      color: rgba(212, 163, 171, 0.72);
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      transform: rotate(34deg);
+    }
+
+    .ticket-kicker {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .ticket-kicker::before {
+      content: "";
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 50%;
+      background: #d4a3ab;
+      box-shadow: 0 0 0 4px rgba(212, 163, 171, 0.14);
+    }
+
+    .ticket-meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin-top: 1.7rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid rgba(212, 163, 171, 0.3);
+    }
+
+    .ticket-meta div {
+      display: grid;
+      gap: 0.15rem;
+    }
+
+    .ticket-meta dt {
+      color: #d4a3ab;
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .ticket-meta dd {
+      color: var(--chalk);
+      font-size: 0.92rem;
+      line-height: 1.35;
+    }
+
+    .checkout-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.35rem;
+    }
+
+    .checkout-step {
+      flex: 0 0 auto;
+      padding: 0.35rem 0.6rem;
+      border: 1px solid rgba(139, 38, 53, 0.24);
+      border-radius: 999px;
+      color: var(--oxblood);
+      font-family: var(--mono);
+      font-size: 0.64rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .pay-options {
+      gap: 1rem;
+    }
+
+    .pay-option {
+      position: relative;
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .pay-option:hover {
+      border-color: rgba(139, 38, 53, 0.5);
+      box-shadow: 0 11px 24px rgba(38, 31, 24, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .pay-option .kicker {
+      margin-bottom: 0.1rem;
+    }
+
+    .payment-note {
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      margin-top: 1.25rem;
+      padding: 0.8rem 0.9rem;
+      background: rgba(139, 38, 53, 0.06);
+      border-left: 2px solid var(--oxblood);
+      color: var(--mute);
+      font-size: 0.84rem;
+      line-height: 1.45;
+    }
+
+    .payment-note svg {
+      flex: 0 0 auto;
+      width: 1rem;
+      height: 1rem;
+      margin-top: 0.15rem;
+      color: var(--oxblood);
+    }
+
     .tuition-desk {
       padding: 2.25rem 2.1rem;
       background: var(--folio);
@@ -1189,6 +1313,20 @@
       .tuition-copy,
       .tuition-desk {
         padding: 1.45rem 1.2rem;
+      }
+
+      .tuition-copy::after {
+        right: -3.4rem;
+        top: 1.7rem;
+      }
+
+      .checkout-head {
+        display: block;
+      }
+
+      .checkout-step {
+        display: inline-block;
+        margin-top: 0.6rem;
       }
     }
   </style>
@@ -1483,7 +1621,7 @@
     <section class="tuition" id="tuition" aria-labelledby="tuition-heading">
       <div class="wrap tuition-grid">
         <div class="tuition-copy">
-          <p class="kicker">Tuition</p>
+          <p class="kicker ticket-kicker">Your course ticket</p>
           <h2 id="tuition-heading" class="display">Secure your seat for 8 October.</h2>
           <p>
             Four live sessions with Dr. Stephen Akintayo: every Thursday, 8 October to 29 October 2026, at 5:00 PM WAT / 11:00 CST.
@@ -1494,12 +1632,35 @@
             <li>Certification and capstone feedback on completion.</li>
             <li>Community access for the term.</li>
           </ul>
+          <dl class="ticket-meta">
+            <div>
+              <dt>Dates</dt>
+              <dd>8–29 October 2026</dd>
+            </div>
+            <div>
+              <dt>Live sessions</dt>
+              <dd>Every Thursday · 5:00 PM WAT</dd>
+            </div>
+            <div>
+              <dt>Format</dt>
+              <dd>Online · 4-week certification</dd>
+            </div>
+            <div>
+              <dt>Access</dt>
+              <dd>Community + course materials</dd>
+            </div>
+          </dl>
         </div>
 
         <div class="tuition-desk">
           <p class="desk-label">Registrar</p>
-          <h3 class="desk-title">Complete payment</h3>
-          <p class="desk-help">Opens in a new tab. Keep your receipt.</p>
+          <div class="checkout-head">
+            <div>
+              <h3 class="desk-title">Choose your payment route</h3>
+              <p class="desk-help">Use the option that matches your billing currency. Checkout opens in a new tab.</p>
+            </div>
+            <span class="checkout-step">Step 1 of 2</span>
+          </div>
 
           <div class="pay-options">
             <article class="pay-option">
@@ -1529,6 +1690,14 @@
           <div class="or-row">Or</div>
 
           <a href="https://wa.me/2348167901719" class="btn btn-line" target="_blank" rel="noopener noreferrer">Questions? Chat on WhatsApp</a>
+
+          <p class="payment-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <path d="M12 3l8 3v5c0 5.2-3.4 8.4-8 10-4.6-1.6-8-4.8-8-10V6l8-3z"/>
+              <path d="m8.5 12 2.2 2.2 4.8-5"/>
+            </svg>
+            Secure checkout. Keep your receipt — it is your proof of enrollment.
+          </p>
 
           <p class="after-pay">
             <strong>After payment:</strong>
